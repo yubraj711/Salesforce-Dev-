@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Engineering_Second_Semester_Result__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(Department__c, &quot;CE&quot;)&amp;&amp; Buliding_Materials__c&gt;=40&amp;&amp; Concrete_Technology__c&gt;=40,&quot;Pass&quot;,
+IF(Buliding_Materials__c &lt;40 || Concrete_Technology__c&lt;40,&quot;Fail&quot;,
+
+IF(ISPICKVAL(Department__c, &quot;ECE&quot;)&amp;&amp; Basic_Electronics__c &gt;=40&amp;&amp; Antennas_and_Propagation__c &gt;=40,&quot;Pass&quot;,
+IF(Basic_Electronics__c &lt;40 || Antennas_and_Propagation__c &lt;40,&quot;Fail&quot;,
+
+IF(ISPICKVAL(Department__c, &quot;CSE&quot;)&amp;&amp; COMPUTER_NETWORKS__c &gt;=40&amp;&amp; Operating__c &gt;=40,&quot;Pass&quot;,
+IF(COMPUTER_NETWORKS__c &lt;40 || Operating__c &lt;40,&quot;Fail&quot;,
+
+IF(ISPICKVAL(Department__c, &quot;ME&quot;)&amp;&amp; Automotive_Design__c &gt;=40&amp;&amp; Thermodynamics__c &gt;=40,&quot;Pass&quot;,
+IF(Automotive_Design__c &lt;40 || Thermodynamics__c &lt;40,&quot;Fail&quot;,
+
+IF(ISPICKVAL(Department__c, &quot;EE&quot;)&amp;&amp; Digital_Electronics__c &gt;=40&amp;&amp; Fundamentals_of_CMOS__c &gt;=40,&quot;Pass&quot;,
+IF(Digital_Electronics__c &lt;40 || Fundamentals_of_CMOS__c &lt;40,&quot;Fail&quot;,&quot;Yet to Update&quot;))))))))))</formula>
+    <label>Engineering Second Semester Result</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

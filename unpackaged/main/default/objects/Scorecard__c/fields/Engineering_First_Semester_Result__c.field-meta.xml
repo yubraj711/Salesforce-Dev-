@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Engineering_First_Semester_Result__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(Department__c, &quot;CSE&quot;) &amp;&amp; Engineering_Mathematics_I__c &gt;= 40 &amp;&amp; Programming_in_C_and_Data_structures__c &gt;= 40, &quot;Pass&quot;,
+IF(Engineering_Mathematics_I__c &lt; 40 || Programming_in_C_and_Data_structures__c &lt;40,&quot;Fail&quot;,
+
+IF(ISPICKVAL(Department__c, &quot;ECE&quot;) &amp;&amp;  Optical_Fiber_Communication__c &gt;= 40 &amp;&amp;  Network_Analysis__c &gt;= 40, &quot;Pass&quot;,
+IF (Optical_Fiber_Communication__c &lt; 40 || Network_Analysis__c&lt;40,&quot;Fail&quot;,
+
+IF(ISPICKVAL(Department__c,&quot;CE&quot;) &amp;&amp; Surveying__c &gt;= 40 &amp;&amp; Structural_Analysis__c &gt;= 40, &quot;Pass&quot;,
+IF(Surveying__c  &lt;40 || Structural_Analysis__c &lt;40,&quot;Fail&quot;,
+
+IF(ISPICKVAL(Department__c, &quot;EE&quot;) &amp;&amp; Electric_Circuits__c &gt;= 40 &amp;&amp; Management_and_Entrepreneurship__c &gt;= 40, &quot;Pass&quot;,
+IF(Electric_Circuits__c &lt;40 || Management_and_Entrepreneurship__c &lt;40,&quot;Fail&quot;,
+
+IF(ISPICKVAL(Department__c, &quot;ME&quot;) &amp;&amp; Solid_Mechanics__c &gt;= 40 &amp;&amp; Fluid_Mechanics__c &gt;= 40, &quot;Pass&quot;,
+IF(Solid_Mechanics__c &lt;40 || Fluid_Mechanics__c &lt;40,&quot;Fail&quot;,&quot;Yet to Update&quot;))))))))))</formula>
+    <label>Engineering First Semester Result</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

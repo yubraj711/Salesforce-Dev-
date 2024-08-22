@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Semester_Fees__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(
+   Stream_Name__c,
+   &#39;Engineering&#39;, 300000,
+   &#39;Medical&#39;, 
+      CASE(
+         Department__c,
+         &#39;MBBS&#39;, 500000,
+         &#39;MD&#39;, 350000,
+         &#39;PharmD&#39;, 250000,
+         &#39;BDA&#39;, 250000,
+         &#39;BSC-Nursing&#39;, 250000,
+         0
+      ),
+   &#39;Bachelor of Arts (B.A.)&#39;, 200000,
+   &#39;Bachelor of Commerce (B.Com.)&#39;, 200000,
+   0
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Semester Fees</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

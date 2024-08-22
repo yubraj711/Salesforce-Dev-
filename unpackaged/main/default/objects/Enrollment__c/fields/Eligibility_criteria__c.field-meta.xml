@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Eligibility_criteria__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    ISPICKVAL(Stream_Name__c, &#39;Medical&#39;) &amp;&amp; Class_X__c &gt;= 0.6 &amp;&amp; Class_XII__c &gt;= 0.6,
+    &#39;Eligible&#39;,
+    IF(
+        ISPICKVAL(Stream_Name__c, &#39;Engineering&#39;) &amp;&amp; Class_X__c &gt;= 0.65 &amp;&amp; Class_XII__c &gt;= 0.65,
+        &#39;Eligible&#39;,
+        IF(
+            ISPICKVAL(Stream_Name__c, &#39;Bachelor of Commerce (B.Com.)&#39;) &amp;&amp; Class_X__c &gt;= 0.55 &amp;&amp; Class_XII__c &gt;= 0.55,
+            &#39;Eligible&#39;,
+            IF(
+                ISPICKVAL(Stream_Name__c, &#39;Bachelor of Arts (B.A.)&#39;) &amp;&amp; Class_X__c &gt;= 0.5 &amp;&amp; Class_XII__c &gt;= 0.5,
+                &#39;Eligible&#39;,
+                &#39;Not Eligible&#39;
+            )
+        )
+    )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Eligibility criteria</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
